@@ -5,6 +5,13 @@
 // TODO: your code here
 
 (function () {
+     document.getElementById("todo-form").addEventListener("submit", add);
+  document.getElementById("todo-list").addEventListener("click", toggle);
+  document.getElementById("filter-all").addEventListener("click", showAll);
+  document
+    .getElementById("filter-active")
+    .addEventListener("click", showActive);
+  document.getElementById("filter-done").addEventListener("click", showDone);
   function updateCounter() {
     let count = document.querySelectorAll(
       "#todo-list li:not(.completed)",
@@ -85,11 +92,5 @@
     }
   }
 
-  document.getElementById("todo-form").addEventListener("submit", add);
-  document.getElementById("todo-list").addEventListener("click", toggle);
-  document.getElementById("filter-all").addEventListener("click", showAll);
-  document
-    .getElementById("filter-active")
-    .addEventListener("click", showActive);
-  document.getElementById("filter-done").addEventListener("click", showDone);
+ 
 })();
